@@ -1,0 +1,14 @@
+<html>
+	<head>
+		<link rel="stylesheet" href="static/blog.css">
+		<title>Django blog</title>
+		<h1> <a href="/">Django blog</a></h1>
+	</head>
+
+{% for post in posts %}
+	<body>
+        <h2> <a href="/">{{ post.title }}</a></h2>
+        <p>{{ post.text|linebreaksbr }}</p>
+	</body>
+{% endfor %}
+</html>
